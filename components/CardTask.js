@@ -1,17 +1,31 @@
-import { Button, Switch, View, Text } from "react-native";
+import { Button, Card, CheckBox, Text } from "@ui-kitten/components";
+
 
 export function CardTask({ task, onDelete, onCheck }) {
   return (
-    <View>
-      <Text>{task.description}</Text>
-      <Switch
-        trackColor={{ false: "#767577", true: "#81b0ff" }}
-        thumbColor={"#f5dd4b"}
-        ios_backgroundColor="#3e3e3e"
-        onValueChange={() => onCheck(task)}
-        value={task.done}
-      />
-      <Button title="X" onPress={() => onDelete(task.objectId)} />
-    </View>
+    <Card style={{ marginVertical: 5 }}>
+      {/* Descrição da tarefa */}
+      <Text category="s1" style={{ marginBottom: 10 }}>
+        {task.description}
+      </Text>
+
+      {/* Marcar como feito */}
+      <CheckBox
+        checked={task.done}
+        onChange={() => onCheck(task)}
+        style={{ marginBottom: 10 }}
+      >
+        {task.done ? "Concluída" : "Pendente"}
+      </CheckBox>
+
+      {/* Botão de deletar */}
+      <Button
+        status="danger"
+        onPress={() => onDelete(task.objectId)}
+        style={{ alignSelf: "flex-end" }}
+      >
+        X
+      </Button>
+    </Card>
   );
 }
