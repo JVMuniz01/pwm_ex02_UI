@@ -48,14 +48,15 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "32fea3ba-b828-4335-b45d-8b3afa00f484"
+        "projectId": "15d14290-552f-4ff1-8032-bfa95b861e8a"
       }
     },
     "runtimeVersion": {
       "policy": "appVersion"
     },
     "updates": {
-      "url": "https://u.expo.dev/32fea3ba-b828-4335-b45d-8b3afa00f484"
-    }
+      "url": "https://u.expo.dev/15d14290-552f-4ff1-8032-bfa95b861e8a"
+    },
+    "owner": "joaovmr"
   }
 }
